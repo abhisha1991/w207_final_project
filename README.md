@@ -103,4 +103,8 @@ root@w207:~/w207_final_project# docker logs w207-project
      or http://127.0.0.1:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
 ```
 3. Extract the token from the above output (the token changes every time we start a new docker container)
-4. Construct a URL like https://PUBLICIP:8888/?token=TOKENID - for the above example -  https://PUBLICIP:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
+4. Construct a URL like https://PUBLICIP:8888/?token=TOKENID - 
+```
+For the above example -  https://PUBLICIP:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
+```
+5. The above notebook points to the Jupyter session on the VM, we can edit the notebook from any other machine
