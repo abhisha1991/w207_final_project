@@ -87,4 +87,20 @@ docker logs w207-project
 ```
 2. The above command gives an output like so
 ```
+root@w207:~/w207_final_project# docker logs w207-project
+[I 22:15:37.259 NotebookApp] Writing notebook server cookie secret to /root/.local/share/jupyter/runtime/notebook_cookie_secret
+[I 22:15:37.860 NotebookApp] Serving notebooks from local directory: /project
+[I 22:15:37.860 NotebookApp] Jupyter Notebook 6.1.5 is running at:
+[I 22:15:37.860 NotebookApp] http://02958160049d:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
+[I 22:15:37.860 NotebookApp]  or http://127.0.0.1:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
+[I 22:15:37.860 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 22:15:37.871 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///root/.local/share/jupyter/runtime/nbserver-1-open.html
+    Or copy and paste one of these URLs:
+        http://02958160049d:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
+     or http://127.0.0.1:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
 ```
+3. Extract the token from the above output (the token changes every time we start a new docker container)
+4. Construct a URL like https://PUBLICIP:8888/?token=<tokenID> - for the above example -  https://PUBLICIP:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
