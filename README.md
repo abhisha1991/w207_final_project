@@ -108,5 +108,5 @@ root@w207:~/w207_final_project# docker logs w207-project
 ```
 For the above example -  https://PUBLICIP:8888/?token=c07bff81363fd69fac6563e38414da39a075495ecaa8cf7d
 ```
-5. The above notebook points to the Jupyter session on the VM, we can edit the notebook from any other machine
+5. The above endpoint points to the Jupyter session on the VM, we can edit/start/stop the notebook from the browser itself using any machine as long as that endpoint is valid (Jupyter server is running)
 6. You can get the above VM's public IP address via "ifconfig"
