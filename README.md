@@ -1,4 +1,4 @@
-# Forest Cover Prediction
+# Facial Keypoints Detection
 
 ## Contributors
 
@@ -8,4 +8,4 @@
 
 ## Helpful Links
 
-Data: https://www.kaggle.com/c/forest-cover-type-prediction/data
+Data: https://www.kaggle.com/c/facial-keypoints-detection 
