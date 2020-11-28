@@ -34,6 +34,10 @@ ibmcloud sl security sshkey-list
 7. Create the VM in IBM cloud and wait till it is fully provisioned
 ```
 ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network=1000 --key=1822632 --san
+
+or create a machine that is beefy with a GPU with
+
+ibmcloud sl vs create --datacenter=lon06 --hostname=w207_p100 --domain=ucb.com --image=2263543 --billing=hourly  --network 1000 --key=1822632 --flavor AC1_8X60X100 --san
 ```
 8. Get the public IP address of the VM provisioned (either via CLI or via the [portal](https://cloud.ibm.com/))
 ```
