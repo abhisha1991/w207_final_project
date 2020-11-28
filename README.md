@@ -75,9 +75,16 @@ If you're using a Windows machine, you'll need SSH to access the VM. Get SSH on 
 SSH into the machine as per above steps to start the docker container from scratch
 1. SSH as per steps above
 2. Check if any containers are running via "docker ps -a"
-3. Optionally remove any container that may be running via "docker rm <container_name>"
+3. Optionally remove any container that may be running via "docker rm <container_name>". For example, docker rm w207-project
 4. Start new container with "docker run -d --name w207-project -p 8888:8888 -v /root/w207_final_project:/project w207"
+5. Confirm notebook is up and running with "docker ps -a"
 
-OR
+OR If the container with the Jupyter notebook is already running
 
-2. If the container with the Jupyter notebook is already running, access the notebook via the public IP endpoint of the VM
+1. Access the notebook via the public IP endpoint of the VM
+```
+docker logs w207-project
+```
+2. The above command gives an output like so
+```
+```
