@@ -53,7 +53,13 @@ git clone https://github.com/abhisha1991/w207_final_project
 cd w207_final_project
 cd docker
 docker build -t w207 -f Dockerfile .
+```
 
+11. Run the following as a sanity check to confirm everything has installed correctly
+
+```
+docker images # Should show the image called w207
+docker ps -a # Should not have any active docker containers running
 ```
 
 **Once you are done with the VM and don't plan to use it for a while, please cancel the VM - else it will be billed indefinitely**
