@@ -31,9 +31,9 @@ ibmcloud login
 ibmcloud sl security sshkey-list
 ```
 6. We will use the following SSH key ID assuming you are working with abhisha@ischool.berkeley.edu - 1822632
-7. Create the VM in IBM cloud
+7. Create the VM in IBM cloud and wait till it is fully provisioned
 ```
-ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network 1000 --key=1822632 --san
+ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network=1000 --key=1822632 --san
 ```
 8. Get the public IP address of the VM provisioned (either via CLI or via the [portal](https://cloud.ibm.com/)
 ```
