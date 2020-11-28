@@ -85,7 +85,7 @@ OR If the container with the Jupyter notebook is already running
 ```
 docker logs w207-project
 ```
-2. The above command gives an output like so
+2. The above command gives an output like so. It also displays any errors / update messages from Jupyter notebooks
 ```
 root@w207:~/w207_final_project# docker logs w207-project
 [I 22:15:37.259 NotebookApp] Writing notebook server cookie secret to /root/.local/share/jupyter/runtime/notebook_cookie_secret
