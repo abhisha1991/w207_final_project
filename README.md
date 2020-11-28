@@ -25,12 +25,12 @@ curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 ```
 ibmcloud login
 ```
-4. Create SSH Key for SSH log in into the VM
-5. Get your SSH Key ID. 
+4. (Optional - only if you are using your own setup) Create SSH Key for SSH log in into the VM
+5. (Optional - only if you are using your own setup) Get your SSH Key ID. 
 ```
 ibmcloud sl security sshkey-list
 ```
-6. We will use the following SSH key ID assuming you are working with abhisha@ischool.berkeley.edu - 1822632
+6. We will use the following SSH key ID assuming you are working with abhisha's account - 1822632
 7. Create the VM in IBM cloud and wait till it is fully provisioned
 ```
 ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network=1000 --key=1822632 --san
@@ -78,6 +78,7 @@ SSH into the machine as per above steps to start the docker container from scrat
 3. Optionally remove any container that may be running via "docker rm <container_name>". For example, docker rm w207-project
 4. Start new container with "docker run -d --name w207-project -p 8888:8888 -v /root/w207_final_project:/project w207"
 5. Confirm notebook is up and running with "docker ps -a"
+6. Optionally, enter into the docker container via "sudo docker exec -it w207-project /bin/bash"
 
 OR If the container with the Jupyter notebook is already running
 
