@@ -44,7 +44,17 @@ ibmcloud sl vs list
 ssh -i sshkey root@<PUBLIC IP ADDRESS>
 ```
 10. Once you are in the VM, we need to install a few things
+```
+sudo apt-get update
+sudo apt install docker
+snap install docker
+sudo apt install git
+git clone https://github.com/abhisha1991/w207_final_project
+cd w207_final_project
+cd docker
+docker build -t w207 -f Dockerfile .
 
+```
 
 **Once you are done with the VM and don't plan to use it for a while, please cancel the VM - else it will be billed indefinitely**
 
