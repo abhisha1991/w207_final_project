@@ -63,6 +63,7 @@ docker ps -a # Should not have any active docker containers running
 ```
 
 **Once you are done with the VM and don't plan to use it for a while, please cancel the VM - else it will be billed indefinitely**
+
 To cancel the VM
 ```
 (base) abhi@abhi-ubuntu:~$ ibmcloud sl vs list
