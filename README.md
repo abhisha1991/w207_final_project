@@ -81,7 +81,7 @@ SSH into the machine as per above steps to start the docker container from scrat
 
 OR If the container with the Jupyter notebook is already running
 
-1. Access the notebook via the public IP endpoint of the VM
+1. Access the notebook auth token via the following command
 ```
 docker logs w207-project
 ```
