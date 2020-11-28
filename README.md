@@ -66,13 +66,13 @@ docker ps -a # Should not have any active docker containers running
 
 ## Quick Start
 
-Ensure the above steps have been done and we have a valid VM at minimum.
+**Ensure the above steps have been done and we have a valid VM at minimum.**
 
 If you're using a Windows machine, you'll need SSH to access the VM. Get SSH on Windows powershell following the steps [here](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)
 
-(Assuming VM already exists with right docker image as per the above steps)
+Assuming VM already exists with right docker image as per the above steps
 
-SSH into the machine as per above steps to start the docker container from scratch
+**SSH into the machine as per above steps to start the docker container from scratch**
 1. SSH as per steps above
 2. Check if any containers are running via "docker ps -a"
 3. Optionally remove any container that may be running via "docker rm <container_name>". For example, docker rm w207-project
@@ -80,7 +80,7 @@ SSH into the machine as per above steps to start the docker container from scrat
 5. Confirm notebook is up and running with "docker ps -a"
 6. Optionally, enter into the docker container via "sudo docker exec -it w207-project /bin/bash"
 
-OR If the container with the Jupyter notebook is already running
+**OR If the container with the Jupyter notebook is already running**
 
 1. Access the notebook auth token via the following command
 ```
