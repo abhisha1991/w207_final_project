@@ -127,3 +127,10 @@ For the above example -  https://PUBLICIP:8888/?token=c07bff81363fd69fac6563e384
 ```
 5. The above endpoint points to the Jupyter session on the VM, we can edit/start/stop the notebook from the browser itself using any machine as long as that endpoint is valid (Jupyter server is running)
 6. You can get the above VM's public IP address via "ifconfig"
+
+## Misc
+
+With sudo apt-get update, If you see an error like "The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6ED91CA3AC1160CD"
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6ED91CA3AC1160CD
+```
