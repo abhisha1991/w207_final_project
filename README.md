@@ -63,6 +63,18 @@ docker ps -a # Should not have any active docker containers running
 ```
 
 **Once you are done with the VM and don't plan to use it for a while, please cancel the VM - else it will be billed indefinitely**
+To cancel the VM
+```
+(base) abhi@abhi-ubuntu:~$ ibmcloud sl vs list
+id          hostname     domain              cpu   memory   public_ip       private_ip     datacenter   action   
+102943676   abhishavm1   UC-Berkeley.cloud   1     1024     50.22.169.236   10.28.81.3     sea01           
+112811766   w207         ucb.com             4     32768    52.116.36.20    10.36.160.79   dal13           
+(base) abhi@abhi-ubuntu:~$ ibmcloud sl vs cancel 112811766
+This will cancel the virtual server instance: 112811766 and cannot be undone. Continue?> yes
+OK
+Virtual server instance: 112811766 was cancelled.
+
+```
 
 ## Quick Start
 
