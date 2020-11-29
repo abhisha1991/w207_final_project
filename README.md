@@ -41,7 +41,7 @@ ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu
 ```
 ibmcloud sl vs list
 ```
-9. SSH into the VM (with the sshkey file). The below assumes you are using the key associated with the above key ID (1822632)
+9. SSH into the VM (with the [sshkey](https://github.com/abhisha1991/w207_final_project/blob/main/ssh/sshkey) file). The below assumes you are using the key associated with the above key ID (1822632)
 ```
 ssh -i sshkey root@<PUBLIC IP ADDRESS>
 ```
