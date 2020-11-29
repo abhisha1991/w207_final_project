@@ -56,7 +56,10 @@ cd w207_final_project
 cd docker
 docker build -t w207 -f Dockerfile .
 ```
-11. Install CUDNN if you are using GPU based VMs. Follow the instructions [here](https://github.com/hoichunlaw/w251-project/tree/master/notebooks#cuda-and-cudnn-setup)
+11. Install CUDNN if you are using GPU based VMs. Create a folder called cuda at the root of the VM and install the packages there. Follow the instructions [here](https://github.com/hoichunlaw/w251-project/tree/master/notebooks#cuda-and-cudnn-setup)
+```
+root@w207v100:~/# mkdir cuda
+```
 
 12. Run the following as a sanity check to confirm everything has installed correctly
 
