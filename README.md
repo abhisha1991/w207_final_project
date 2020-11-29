@@ -12,7 +12,7 @@ Project: https://www.kaggle.com/c/facial-keypoints-detection
 
 ## Note on Compute Requirements
 
-We will use IBM cloud to provision compute that will host a jupyter notebook that will run our model. We are doing this because adequate compute is needed to be able to run the deep learning models for the above Kaggle competition (which is not available by default on the Kaggle notebooks). Upon running heavy models natively in Kaggle, we get the following prompt - "Your notebook tried to allocate more memory than is available. It has restarted"
+We will use IBM cloud to provision compute that will host a jupyter notebook that will run our model. We are doing this because adequate compute is needed to be able to run the deep learning models for the above Kaggle competition (which is not available by default on the Kaggle notebooks). Upon running heavy models natively in Kaggle, we get the following prompt - "Your notebook tried to allocate more memory than is available. It has restarted". More importantly, we were able to reduce training times from approx. 300 seconds per epoch in Kaggle notebooks to around 2 seconds per epoch with our accelerated VMs. Thus, for model iteration purposes as well, its best if we rely on our own compute, rather than managed services like Kaggle notebooks.
 
 ## Initial Setup (One Time)
 
