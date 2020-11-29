@@ -31,14 +31,11 @@ ibmcloud login
 ibmcloud sl security sshkey-list
 ```
 6. We will use the following SSH key ID assuming you are working with abhisha's account - 1822632
-7. Create the VM in IBM cloud and wait till it is fully provisioned
+7. Create the VM in IBM cloud and wait till it is fully provisioned. The below are 3 commands to provision VMs of 3 different kinds. First 2 VMs come with GPUs and are recommended for deep learning training (reduced training time). Try provisioning the VMs with GPUs, only use the last command (non GPU VM) if the GPU VMs cannot be provisioned.
 ```
-ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network=1000 --key=1822632 --san
-
-or create a machine that is beefy with a GPU with
-
-ibmcloud sl vs create --datacenter=lon06 --hostname=w207p100 --domain=ucb.com --image=2263543 --billing=hourly  --network 1000 --key=1822632 --flavor AC1_8X60X100 --san
 ibmcloud sl vs create --datacenter=lon04 --hostname=w207v100 --domain=ucb.com --image=2263543 --billing=hourly  --network 1000 --key=1822632 --flavor AC2_8X60X100 --san
+ibmcloud sl vs create --datacenter=lon06 --hostname=w207p100 --domain=ucb.com --image=2263543 --billing=hourly  --network 1000 --key=1822632 --flavor AC1_8X60X100 --san
+ibmcloud sl vs create --datacenter=dal13 --hostname=w207 --domain=ucb.com  --cpu=4 --memory=32768 --disk=100 --os=UBUNTU_18_64 --billing=hourly --network=1000 --key=1822632 --san
 ```
 8. Get the public IP address of the VM provisioned (either via CLI or via the [portal](https://cloud.ibm.com/))
 ```
@@ -59,8 +56,9 @@ cd w207_final_project
 cd docker
 docker build -t w207 -f Dockerfile .
 ```
+11. Install CUDNN if you are using GPU based VMs. Follow the instructions [here](https://github.com/hoichunlaw/w251-project/tree/master/notebooks#cuda-and-cudnn-setup)
 
-11. Run the following as a sanity check to confirm everything has installed correctly
+12. Run the following as a sanity check to confirm everything has installed correctly
 
 ```
 docker images # Should show the image called w207
@@ -94,7 +92,7 @@ Assuming VM already exists with right docker image as per the above steps
 1. SSH as per steps above
 2. Check if any containers are running via "docker ps -a"
 3. Optionally remove any container that may be running via "docker rm <container_name>". For example, docker rm w207-project
-4. Start new container with "docker run -d --name w207-project -p 8888:8888 -v /root/w207_final_project:/project w207"
+4. Start new container with "docker run -d --name w207-project -p 8888:8888 -v /root/w207_final_project:/project w207". **If using GPU based VMs, run nvidia-docker instead of docker.**
 5. Confirm notebook is up and running with "docker ps -a"
 6. Optionally, enter into the docker container via "sudo docker exec -it w207-project /bin/bash"
 
