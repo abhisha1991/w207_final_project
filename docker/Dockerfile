@@ -11,6 +11,7 @@ RUN pip3 install jupyter
 RUN pip3 install -U tf-hub-nightly
 RUN pip3 install opencv-python
 RUN pip3 install matplotlib
+RUN apt-get install 'ffmpeg' 'libsm6' 'libxext6' -y
 
 # RUN mkdir /project
 WORKDIR /project
