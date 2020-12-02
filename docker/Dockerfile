@@ -9,6 +9,7 @@ RUN pip3 install -U scikit-learn
 RUN pip3 install keras==2.4.2
 RUN pip3 install jupyter
 RUN pip3 install -U tf-hub-nightly
+RUN pip3 install opencv-python
 RUN pip3 install matplotlib
 
 # RUN mkdir /project
