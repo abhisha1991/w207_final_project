@@ -18,7 +18,7 @@ Upon running heavy models natively in Kaggle, we get the following prompt - "You
 
 More importantly, when we augment our images, we are effectively increasing our training sample size by (say) 10x. After doing this, the training time on Kaggle notebooks increases significantly. This is another motivation to set up our own compute server. We were able to reduce training times from approx. 300 seconds per epoch in Kaggle notebooks to around 2 seconds per epoch with our accelerated VMs. Thus, for model iteration purposes as well, its best if we rely on our own compute, rather than managed services like Kaggle notebooks.
 
-Lastly, there are several packages like Pillow, Open CV and certain versions of Tensorflow-GPU which are needed for image manipulation as well as for speeding up training models on GPU VMs. These are hard to install and maintain when dealing with Kaggle sessions (they have to be downloaded every Kaggle session + some versions of these packages may not play nice with existing packages and so on). This was a third motivation for provisioning our own compute.
+Lastly, there are several packages like Pillow, Open CV and certain versions of Tensorflow-GPU which are needed for image manipulation as well as for speeding up training models on GPU VMs. These are hard to install and maintain when dealing with Kaggle sessions (they have to be downloaded every Kaggle session + some versions of these packages may not play nice with existing packages and so on). This was a third motivation for provisioning our own server where we can do versioning and package management in a more standardized way.
 
 ## Initial Setup (One Time)
 
